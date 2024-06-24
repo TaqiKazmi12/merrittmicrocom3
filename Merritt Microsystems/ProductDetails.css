@@ -1,0 +1,258 @@
+/* Colors */
+:root {
+    --primary-color: #007bff; /* Primary color */
+    --secondary-color: #6c757d; /* Secondary color */
+    --text-color: #333; /* Text color */
+    --text-light-color: #888; /* Light text color */
+    --text-medium-color: #555; /* Medium text color */
+    --success-color: #28a745; /* Success color */
+}
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Center container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Product Image Styles */
+.product-image {
+    max-width: 40%;
+    margin-right: 20px;
+}
+
+.product-image img {
+    width: 560px; /* Fixed width */
+    height: 300px; /* Fixed height */
+    display: block;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+}
+
+/* Product Details Styles */
+.product-details {
+    width: 50%;
+    margin-bottom: 20px;
+}
+
+.product-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: var(--text-color); /* Text color */
+}
+
+.product-rating {
+    margin-bottom: 15px;
+    color: var(--text-light-color); /* Light text color */
+}
+
+.product-description {
+    margin-bottom: 15px;
+    color: var(--text-medium-color); /* Medium text color */
+}
+
+.technical-specs {
+    margin-bottom: 15px;
+}
+
+.technical-specs h3 {
+    margin-bottom: 10px;
+    color: var(--text-color); /* Text color */
+}
+
+.technical-specs ul {
+    list-style-type: none;
+}
+
+.technical-specs li {
+    margin-bottom: 5px;
+    color: var(--text-medium-color); /* Medium text color */
+}
+
+.availability {
+    color: var(--success-color); /* Success color */
+}
+
+.availability p {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .product-image {
+        max-width: 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .product-details {
+        width: 100%;
+    }
+
+    .product-name {
+        font-size: 20px;
+    }
+
+    .product-rating,
+    .product-description,
+    .technical-specs,
+    .availability {
+        font-size: 14px;
+    }
+}
+
+/* Icon styles */
+.product-details .technical-specs ul li i {
+    margin-right: 8px;
+}
+
+/* Star ratings */
+.product-rating .stars {
+    color: #FFD700; /* Gold color for stars */
+}
+
+.product-rating .stars i {
+    font-size: 18px;
+    margin-right: 2px;
+}
+/* Fade-in animation */
+.fade-in {
+    animation: fadeIn ease 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-in animation */
+.slide-in {
+    animation: slideIn ease 1s;
+    opacity: 0;
+    animation-fill-mode: forwards;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* Shake animation */
+.shake {
+    animation: shake 0.5s ease-in-out infinite alternate;
+}
+
+@keyframes shake {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(5px);
+    }
+}
+.sameproducts {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    max-width: 1000px; /* Adjust max-width based on your design */
+    margin: auto;
+    margin-top: 210px;
+    justify-content: center;
+}
+
+.single-card {
+    display: flex;
+    flex-direction: column;
+    width: calc(33.33% - 40px); /* Adjust card width based on the number of cards per row */
+    margin: 20px;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.card-image {
+    width: 100%; 
+    height: 150px;
+ 
+}
+
+.card-content {
+    flex-grow: 1;
+    padding: 10px;
+    margin: auto;
+}
+
+.card-heading {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card-rating {
+    margin-bottom: 5px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #004d4d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 240px; /* Adjust button width to fill the card */
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 2px solid #004d4d;
+    color: #004d4d;
+}
+
+@media (max-width: 768px) {
+    .single-card {
+        width: calc(50% - 40px); /* 2 cards per row on smaller screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .single-card {
+        width: calc(100% - 40px); /* 1 card per row on extra small screens */
+    }
+}
+
+.sameproductsheading{
+  
+        text-align: center;
+        position: relative;
+        top: 170px;
+        font-family: sans-serif;
+        text-decoration: underline 7px solid #004d4d;
+    
+}

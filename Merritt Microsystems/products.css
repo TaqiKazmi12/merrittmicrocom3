@@ -1,0 +1,235 @@
+.side-filter h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.side-filter ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.side-filter li {
+    margin-bottom: 10px;
+}
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 99; /* Ensure navbar is above other content */
+}
+
+.side-filter a {
+    display: block;
+    padding: 8px;
+    border-radius: 5px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.side-filter a:hover {
+    background-color: #eaeaea;
+}
+
+.selected-category {
+    background-color: #e2f0fb; /* Highlight color for selected category */
+    padding: 8px;
+    border-radius: 5px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.container {
+    display: flex;
+}
+
+.side-filter {
+    position: absolute;
+    top: 100px; /* Adjust this value as needed */
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 100px);
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-right: 1px solid #ccc;
+    overflow-y: auto;
+    top: 150px;
+    z-index: 100; /* Ensure the sidebar is above other content */
+}
+
+.product-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-left: 270px; /* Match the width of the sidebar */
+    margin-top: 20px;
+    padding: 20px;
+    flex-grow: 1;
+    z-index: 1; /* Ensure product cards are below sidebar */
+}
+
+/* Additional CSS for product cards */
+.product-card {
+    flex: 1 1 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.product-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    margin-bottom: 10px;
+}
+
+
+.product-card .btn {
+    display: block;
+    padding: 8px 15px;
+    background-color: #004d4d; /* Use the navbar background color */
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.product-card .btn:hover {
+    background-color: #09aaaa; /* Slightly darker shade for hover effect */
+}
+/* Checkmark for selected categories */
+.side-filter ul li a.selected::before {
+    content: "✔";
+    margin-right: 8px;
+    color: #004d4d; /* Use the navbar background color */
+}
+
+
+.imgnumber1{
+    object-fit: contain !important;
+    width: 270px !important;
+
+}
+
+
+.single-card {
+    display: flex;
+    flex-direction: column;
+    width: 277px;
+    height: 289px;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.single-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 280px;
+    height: 150px;
+    object-fit: cover;
+}
+.card-content {
+    flex-grow: 1;
+    padding: 10px;
+    margin: auto;
+}
+
+.card-heading {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.card-rating {
+    margin-bottom: 5px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 8px 15px;
+    background-color: #004d4d;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    width: 250px;
+}
+
+.btn:hover {
+    background-color: transparent;
+    border: 2px solid #004d4d;
+    color: #004d4d;
+}
+.spantick{
+    float: right;
+    position: relative;
+    top: -32px;
+    left: -100px;
+
+}
+.spantick2{
+    left: -140px !important;
+}
+footer{
+    margin-top: 350px;
+}
+@media only screen and (max-width: 618px) {
+    .product-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: flex-start;
+        margin-left: 100px;
+        margin-top: 220px;
+        padding: 20px;
+        flex-grow: 1;
+        z-index: 1;
+    }
+    .side-filter {
+        position: absolute;
+        top: 100px;
+        left: 0;
+        width: 250px;
+        height: calc(32vh - 100px);
+        background-color: #f9f9f9;
+        padding: 20px;
+        border-right: 1px solid #ccc;
+        overflow-y: auto;
+        top: 150px;
+        z-index: 100;
+    }
+  }
+  body{
+    overflow-x: hidden;
+  }
